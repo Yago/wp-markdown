@@ -40,12 +40,25 @@ body.reply-edit .bbp-reply-form code{width: auto;display: inline;padding: 5px;}
   clear: none;
   width: 50%;
   float: left;
+  margin-bottom: 20px !important;
 }
 .wp-editor-area {
   font-family: Monaco, monospace !important;
   font-size: 14px !important;
   background: #262626;
   color: #f5f5f5;
+}
+
+#content-resize-handle:before {
+  clear: both;
+}
+
+#content-resize-handle {
+  display: block !important;
+  position: absolute;
+  float: none;
+  left: 48.8%;
+  bottom: 20px;
 }
 
 #wmd-previewcontent {
@@ -62,11 +75,19 @@ body.reply-edit .bbp-reply-form code{width: auto;display: inline;padding: 5px;}
 @media only screen and (max-width: 1400px) {
   #wp-content-editor-container {
     width: 100%;
+    float: none;
   }
 
   #wmd-previewcontent {
     clear: none;
     width: 97%;
     margin: 30px 0;
+    float: none;
+  }
+
+  #content-resize-handle {
+    left: 98%;
+    bottom: 30px;
+    position: relative;
   }
 }

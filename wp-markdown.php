@@ -496,7 +496,7 @@ class WordPress_Markdown {
 	function admin_footers_script(){
 	?> <script>
 		jQuery(document).ready(function($) {                
-			$('#wp-content-editor-container').after("<div id='wmd-previewcontent' class='wmd-panel wmd-preview prettyprint'></div>");
+			$('#wp-content-editor-container+#content-resize-handle').after("<div id='wmd-previewcontent' class='wmd-panel wmd-preview prettyprint'></div><div style='clear:both;'></div>");
 			$('#ed_toolbar').html("<div id='wmd-button-barcontent'></div>");
 			var converter = new Markdown.getSanitizingConverter();
 			var editor = new Markdown.Editor(converter, 'content');
