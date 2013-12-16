@@ -36,7 +36,7 @@ body.reply-edit .bbp-reply-form code{width: auto;display: inline;padding: 5px;}
 #wp-content-editor-tools {
   min-height: 50px;
 }
-.wp-content-editor-wrapper {
+#wp-content-editor-wrapper {
   position: relative;
   clear: none;
   width: 50%;
@@ -71,7 +71,7 @@ body.reply-edit .bbp-reply-form code{width: auto;display: inline;padding: 5px;}
 }
 
 @media only screen and (max-width: 1400px) {
-  .wp-content-editor-wrapper {
+  #wp-content-editor-wrapper {
     width: 100%;
     float: none;
   }
