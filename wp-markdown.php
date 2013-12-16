@@ -495,8 +495,9 @@ class WordPress_Markdown {
 
 	function admin_footers_script(){
 	?> <script>
-		jQuery(document).ready(function($) {                
-			$('#wp-content-editor-container+#content-resize-handle').after("<div id='wmd-previewcontent' class='wmd-panel wmd-preview prettyprint'></div><div style='clear:both;'></div>");
+		jQuery(document).ready(function($) {
+			$('#wp-content-editor-container').next('#content-resize-handle').andSelf().wrapAll('<div class="wp-content-editor-wrapper" />');
+			$('.wp-content-editor-wrapper').after("<div id='wmd-previewcontent' class='wmd-panel wmd-preview prettyprint'></div><div style='clear:both;'></div>");
 			$('#ed_toolbar').html("<div id='wmd-button-barcontent'></div>");
 			var converter = new Markdown.getSanitizingConverter();
 			var editor = new Markdown.Editor(converter, 'content');
